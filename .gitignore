@@ -1,0 +1,5 @@
+
+jenkins_home/*
+nexus-data/*
+sonarqube-data/*
+sonarqube-logs/*
