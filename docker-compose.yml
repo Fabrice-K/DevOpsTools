@@ -7,7 +7,7 @@ services:
     volumes:
       - ./nexus-data:/nexus-data
   jenkins:
-    image: jenkins/jenkins:lts-jdk11
+    image: jenkinsci/blueocean:1.25.3
     ports:
       - "8080:8080"
     volumes:
