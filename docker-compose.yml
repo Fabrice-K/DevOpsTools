@@ -4,6 +4,7 @@ services:
     image: sonatype/nexus3:3.37.3
     ports:
       - "8081:8081"
+      - "8183:8183"
     volumes:
       - ./nexus-data:/nexus-data
   jenkins:
@@ -12,10 +13,10 @@ services:
       - "8080:8080"
     volumes:
       - ./jenkins_home:/var/jenkins_home
-  sonarqube:
-    image: sonarqube:8.9.7-community
-    ports:
-      - "9000:9000"
-    volumes:
-      - ./sonarqube-data:/opt/sonarqube/data
-      - ./sonarqube-logs:/opt/sonarqube/logs
+  # sonarqube:
+  #   image: sonarqube:8.9.7-community
+  #   ports:
+  #     - "9000:9000"
+  #   volumes:
+  #     - ./sonarqube-data:/opt/sonarqube/data
+  #     - ./sonarqube-logs:/opt/sonarqube/logs
